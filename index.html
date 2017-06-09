@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {border-collapse: collapse; table-layout: fixed; width: 500px}
+        th {border: solid 1px;}
+        td {border: solid 1px;}
+    </style>
+    <script language="JavaScript">
+    function onButtonClick(){
+        var a = parseFloat(frm1.A.value);
+        var b = parseFloat(frm1.B.value);
+        var c = parseFloat(frm1.C.value);
+        var d = parseFloat(frm1.D.value);
+        var e = a*0.0125*(1+0.0025*b)*(0.0012*c+0.88);
+        var f1 = Math.floor(e*1.21)
+        var f2 = Math.floor(e*1.331)
+        var f3 = Math.floor(e*1.3915)
+        var f4 = Math.floor(e*1.452)
+        var f5 = Math.floor(e*1.5125)
+        var f6 = Math.floor(e*1.573)
+        if(d <= 50){
+            var score1 = f1*d;
+        }
+        else if(50 < d && d <= 100){
+            var score1 = f1*50+f2*(d-50);
+        }
+        else if(100 < d && d <= 200){
+            var score1 = f1*50+f2*50+f3*(d-100);
+        }
+        else if(200 < d && d <= 400){
+            var score1 = f1*50+f2*50+f3*100+f4*(d-200);
+        }
+        else if(400 < d && d <= 600){
+            var score1 = f1*50+f2*50+f3*100+f4*200+f5*(d-400);
+        }
+        else {
+            var score1 = f1*50+f2*50+f3*100+f4*200+f5*200+f6*(d-600);
+        }
+        frm1.E.value = score1;
+    }
+    
+    
+    </script>
+</head>
+<body>
+   <h1>スコア計算機</h1>
+   
+   <form name="frm1">
+       <p>ユニット値　　<input type="text" name="A" size="4" value="50000"></p> 
+       <p>ロングノーツ　<input type="text" name="B" size="4" value="10">%</p>
+       <p>パーフェクト　<input type="text" name="C" size="4" value="90">%</p>
+       <p>ノーツ数　　　<input type="text" name="D" size="4" value="">個</p>
+       <br>
+       <input type="button" name="buttoncalc" onClick="onButtonClick()" value="計算！">
+       <p>スコア　　 　<input type="text" name="E" size="4" value=""></p>
+       
+   </form>
+   
+   <table>
+       <tr>
+           <th></th>
+           <th>アイコン数</th>
+           <th>確率</th>
+           <th>スコア</th>
+           <th>SIS</th>
+       </tr>
+       <tr>
+           <td>1</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+       </tr>
+       <tr>
+           <td>2</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+       </tr><tr>
+           <td>3</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+       </tr><tr>
+           <td>4</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+       </tr><tr>
+           <td>5</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+       </tr><tr>
+           <td>6</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+       </tr>
+       <tr>
+           <td>7</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+       </tr>
+       <tr>
+           <td>8</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+       </tr>
+       <tr>
+           <td>9</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+       </tr>
+   </table>
+   
+</body>
+</html>
+<!--
+A*0.0125*(1*(1-B*0.01)+1.25*B*.01)*(1*c*0.01+0.88(1-c*0.01))*1.21*D
+
+4変数をABCDそれぞれに代入,計算しansとする。frm1.E.valueにansを表示
+function onButtonClick(){
+        var A = parseFloat(frm1.A.value);
+        var B = parseFloat(frm1.B.value);
+        var C = parseFloat(frm1.C.value);
+        var D = parseFloat(frm1.D.value);
+        var ans = A*0.0125*(1+0.0025*B)*(0.0012*C+0.88)*1.21*D;
+        frm1.E.value = ans;
+    }
+    
+   var ans = (A*0.0125*(1+0.0025*B)*(0.0012*C+0.88)*1.21*50)+(A*0.0125*(1+0.0025*B)*(0.0012*C+0.88)*1.331*(D-50);
