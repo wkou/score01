@@ -3,7 +3,7 @@ table {border: solid 1px; border-collapse: collapse; table-layout: auto; }
         th {border: solid 1px; text-align: center}
         td {border: solid 1px; text-align: center}
 th.ta1 {width: 20px;}
-th.ta2 {width: 100px;}
+th.ta2 {width: 80px;}
 th.ta3 {width: 40px;}
 input {width: 50px;}
 input.ta4 {width: 20px;}
