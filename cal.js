@@ -10,124 +10,146 @@ function onButtonClick() {
         f3 = Math.floor(e * 1.3915),
         f4 = Math.floor(e * 1.452),
         f5 = Math.floor(e * 1.5125),
-        f6 = Math.floor(e * 1.573);
+        f6 = Math.floor(e * 1.573),
+        score1,
+        r1 = parseFloat(document.frm2.R1.value),
+        r2 = parseFloat(document.frm2.R2.value),
+        r3 = parseFloat(document.frm2.R3.value),
+        r4,
+        s1 = parseFloat(document.frm2.S1.value),
+        s2 = parseFloat(document.frm2.S2.value),
+        s3 = parseFloat(document.frm2.S3.value),
+        s4,
+        t1 = parseFloat(document.frm2.T1.value),
+        t2 = parseFloat(document.frm2.T2.value),
+        t3 = parseFloat(document.frm2.T3.value),
+        t4,
+        u1 = parseFloat(document.frm2.U1.value),
+        u2 = parseFloat(document.frm2.U2.value),
+        u3 = parseFloat(document.frm2.U3.value),
+        u4,
+        v1 = parseFloat(document.frm2.V1.value),
+        v2 = parseFloat(document.frm2.V2.value),
+        v3 = parseFloat(document.frm2.V3.value),
+        v4,
+        w1 = parseFloat(document.frm2.W1.value),
+        w2 = parseFloat(document.frm2.W2.value),
+        w3 = parseFloat(document.frm2.W3.value),
+        w4,
+        x1 = parseFloat(document.frm2.X1.value),
+        x2 = parseFloat(document.frm2.X2.value),
+        x3 = parseFloat(document.frm2.X3.value),
+        x4,
+        y1 = parseFloat(document.frm2.Y1.value),
+        y2 = parseFloat(document.frm2.Y2.value),
+        y3 = parseFloat(document.frm2.Y3.value),
+        y4,
+        z1 = parseFloat(document.frm2.Z1.value),
+        z2 = parseFloat(document.frm2.Z2.value),
+        z3 = parseFloat(document.frm2.Z3.value),
+        z4,
+        g,
+        score2;
     
     if (d <= 50) {
-        var score1 = f1 * d;
+        score1 = f1 * d;
     } else if (50 < d && d <= 100) {
-        var score1 = f1 * 50 + f2 * (d - 50);
+        score1 = f1 * 50 + f2 * (d - 50);
     } else if (100 < d && d <= 200) {
-        var score1 = f1 * 50 + f2 * 50 + f3 * (d - 100);
+        score1 = f1 * 50 + f2 * 50 + f3 * (d - 100);
     } else if (200 < d && d <= 400) {
-        var score1 = f1 * 50 + f2 * 50 + f3 * 100 + f4 * (d - 200);
+        score1 = f1 * 50 + f2 * 50 + f3 * 100 + f4 * (d - 200);
     } else if (400 < d && d <= 600) {
-        var score1 = f1 * 50 + f2 * 50 + f3 * 100 + f4 * 200 + f5 * (d - 400);
+        score1 = f1 * 50 + f2 * 50 + f3 * 100 + f4 * 200 + f5 * (d - 400);
     } else {
-        var score1 = f1 * 50 + f2 * 50 + f3 * 100 + f4 * 200 + f5 * 200 + f6 * (d - 600);
+        score1 = f1 * 50 + f2 * 50 + f3 * 100 + f4 * 200 + f5 * 200 + f6 * (d - 600);
     }
         
-    var r1 = parseFloat(document.frm2.R1.value);
-    var r2 = parseFloat(document.frm2.R2.value);
-    var r3 = parseFloat(document.frm2.R3.value);
+    
     if (document.frm2.R4.checked) {
-        var r4 = 2.5;
+        r4 = 2.5;
     } else {
-        var r4 = 1;
+        r4 = 1;
     }
         
-    var s1 = parseFloat(document.frm2.S1.value);
-    var s2 = parseFloat(document.frm2.S2.value);
-    var s3 = parseFloat(document.frm2.S3.value);
+    
     if (document.frm2.S4.checked) {
-        var s4 = 2.5;
+        s4 = 2.5;
     } else {
-        var s4 = 1;
+        s4 = 1;
     }
         
-    var t1 = parseFloat(document.frm2.T1.value);
-    var t2 = parseFloat(document.frm2.T2.value);
-    var t3 = parseFloat(document.frm2.T3.value);
+    
     if (document.frm2.T4.checked) {
-        var t4 = 2.5;
+        t4 = 2.5;
     } else {
-        var t4 = 1;
+        t4 = 1;
     }
         
-    var u1 = parseFloat(document.frm2.U1.value);
-    var u2 = parseFloat(document.frm2.U2.value);
-    var u3 = parseFloat(document.frm2.U3.value);
+    
     if (document.frm2.U4.checked) {
-        var u4 = 2.5;
+        u4 = 2.5;
     } else {
-        var u4 = 1;
+        u4 = 1;
     }
         
-    var v1 = parseFloat(document.frm2.V1.value);
-    var v2 = parseFloat(document.frm2.V2.value);
-    var v3 = parseFloat(document.frm2.V3.value);
+    
     if (document.frm2.V4.checked) {
-        var v4 = 2.5;
+        v4 = 2.5;
     } else {
-        var v4 = 1;
+        v4 = 1;
     }
         
-    var w1 = parseFloat(document.frm2.W1.value);
-    var w2 = parseFloat(document.frm2.W2.value);
-    var w3 = parseFloat(document.frm2.W3.value);
+    
     if (document.frm2.W4.checked) {
-        var w4 = 2.5;
+        w4 = 2.5;
     } else {
-        var w4 = 1;
+        w4 = 1;
     }
         
-    var x1 = parseFloat(document.frm2.X1.value);
-    var x2 = parseFloat(document.frm2.X2.value);
-    var x3 = parseFloat(document.frm2.X3.value);
+    
     if (document.frm2.X4.checked) {
-        var x4 = 2.5;
+        x4 = 2.5;
     } else {
-        var x4 = 1;
+        x4 = 1;
     }
         
-    var y1 = parseFloat(document.frm2.Y1.value);
-    var y2 = parseFloat(document.frm2.Y2.value);
-    var y3 = parseFloat(document.frm2.Y3.value);
+    
     if (document.frm2.Y4.checked) {
-        var y4 = 2.5;
+        y4 = 2.5;
     } else {
-        var y4 = 1;
+        y4 = 1;
     }
         
-    var z1 = parseFloat(document.frm2.Z1.value);
-    var z2 = parseFloat(document.frm2.Z2.value);
-    var z3 = parseFloat(document.frm2.Z3.value);
+    
     if (document.frm2.Z4.checked) {
-        var z4 = 2.5;
+        z4 = 2.5;
     } else {
-        var z4 = 1;
+        z4 = 1;
     }
         
     if (isNaN(r1)) {
-        var g = 0;
-    } else if(isNaN(s1)) {
-        var g = (d * 0.01) * (r2 * r3 * r4 / r1);
+        g = 0;
+    } else if (isNaN(s1)) {
+        g = (d * 0.01) * (r2 * r3 * r4 / r1);
     } else if (isNaN(t1)) {
-        var g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1);
+        g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1);
     } else if (isNaN(u1)) {
-        var g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1);
+        g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1);
     } else if (isNaN(v1)) {
-        var g = (d*0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1 + u2 * u3 * u4 / u1);
+        g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1 + u2 * u3 * u4 / u1);
     } else if (isNaN(w1)) {
-        var g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1 + u2 * u3 * u4 / u1 + v2 * v3 * v4 / v1);
+        g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1 + u2 * u3 * u4 / u1 + v2 * v3 * v4 / v1);
     } else if (isNaN(x1)) {
-        var g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1 + u2 * u3 * u4 / u1 + v2 * v3 * v4 / v1 + w2 * w3 * w4 / w1);
+        g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1 + u2 * u3 * u4 / u1 + v2 * v3 * v4 / v1 + w2 * w3 * w4 / w1);
     } else if (isNaN(y1)) {
-        var g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1 + u2 * u3 * u4 / u1 + v2 * v3 * v4 / v1 + w2 * w3 * w4 / w1 + x2 * x3 * x4 / x1);
+        g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1 + u2 * u3 * u4 / u1 + v2 * v3 * v4 / v1 + w2 * w3 * w4 / w1 + x2 * x3 * x4 / x1);
     } else if (isNaN(z1)) {
-        var g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3  * t4 / t1 + u2 * u3 * u4 / u1 + v2 * v3 * v4 / v1 + w2 * w3 * w4 / w1 + x2 * x3 * x4 / x1 + y2 * y3 * y4 / y1);
+        g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3  * t4 / t1 + u2 * u3 * u4 / u1 + v2 * v3 * v4 / v1 + w2 * w3 * w4 / w1 + x2 * x3 * x4 / x1 + y2 * y3 * y4 / y1);
     } else {
-        var g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1 + u2 * u3 * u4 / u1 + v2 * v3 * v4 / v1 + w2 * w3 * w4 / w1 + x2 * x3 * x4 / x1 + y2 * y3 * y4 / y1 + z2 * z3 * z4 / z1);
-    } var score2 = Math.floor(g)
-        document.frm3.E.value = score1+score2;
-        
+        g = (d * 0.01) * (r2 * r3 * r4 / r1 + s2 * s3 * s4 / s1 + t2 * t3 * t4 / t1 + u2 * u3 * u4 / u1 + v2 * v3 * v4 / v1 + w2 * w3 * w4 / w1 + x2 * x3 * x4 / x1 + y2 * y3 * y4 / y1 + z2 * z3 * z4 / z1);
     }
+    score2 = Math.floor(g);
+    document.frm3.E.value = score1 + score2;
+        
+}
