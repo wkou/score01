@@ -65,6 +65,7 @@ function onButtonClick() {
         score1 = f1 * 50 + f2 * 50 + f3 * 100 + f4 * 200 + f5 * 200 + f6 * (d - 600);
     }
         
+        
     
     if (document.frm2.R4.checked) {
         r4 = 2.5;
